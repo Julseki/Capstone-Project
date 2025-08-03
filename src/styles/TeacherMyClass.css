@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.student-home-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-box4,
+.header-box5,
+.header-box6 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.class-box {
+  background-color: #8b7745;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid black;
+}
+
+.class-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.class-box p {
+  font-size: 1.2rem;
+}
+
+.next-icon {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.next-icon:hover {
+  transform: translateX(5px);
+  color: #000;
+}
+.class-box {
+  position: relative;
+  background-color: #8b7745;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid black;
+}
+
+.class-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.student-home-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.header-box4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-box4:hover {
+  background-color: #768e50;
+}
+
+.header-box4 .icon {
+  font-size: 20px;
+  color: #887443;
+}
+
+.header-box4 span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header-box5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-box5:hover {
+  background-color: #768e50;
+}
+
+.header-box5 .icon {
+  font-size: 20px;
+  color: #887443;
+}
+
+.header-box5 span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header-box6 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-box6:hover {
+  background-color: #768e50;
+}
+
+.header-box6 .icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.header-box6 span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.app-title {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}

@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.join-game-page {
+  display: flex;
+  height: 85vh;
+  width: 150vh;
+  background-color: #a68e52;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+}
+
+.sidebar4 {
+  width: 250px;
+  background-color: #5f8f4f;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  border-radius: 10px 0 0 10px;
+}
+
+.leave-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.avatar-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.username {
+  margin: 10px 0 0 0;
+  font-size: 1.2rem;
+}
+
+.role {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.menu {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.menu button.active {
+  font-weight: bold;
+}
+
+.join-game-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.game-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.game-card {
+  background: #a68e52;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.game-details p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.not-started {
+  color: #4caf50;
+}
+
+.status.playing {
+  color: #2196f3;
+}
+
+.status.finished {
+  color: #f44336;
+}
+
+.join-btn {
+  background-color: #d1b060;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.game-date {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: #555;
+}
+.quiz-form {
+  background-color: #a68e52;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 60vh;
+}
+
+.quiz-form label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.quiz-form input,
+.quiz-form textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+  background-color: #fbe7b2;
+}
+
+.quiz-form textarea {
+  height: 85px;
+  resize: none;
+}
+
+.quiz-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.back-btn {
+  background-color: #5e463a;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes rotateAvatar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: rotateAvatar 1s ease-out;
+}

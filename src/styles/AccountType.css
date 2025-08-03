@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.accounttype-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+p {
+  font-size: 36px;
+  text-align: center;
+  -webkit-text-stroke: 1.3px black;
+  font-weight: 700;
+}
+
+.accounttype-box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.accounttype-box {
+  width: 45%;
+  height: 150px;
+  border-radius: 20px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-weight: 600;
+  font-size: 18px;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.student-box {
+  background-color: #d9d9d9;
+  color: #877242;
+}
+
+.teacher-box {
+  background-color: #d9d9d9;
+  color: #778f51;
+}
+
+.accounttype-box:hover {
+  transform: scale(1.05);
+}
+
+.account-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}

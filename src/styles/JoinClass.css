@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.container h1 {
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.input-field {
+  width: 450px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #768e50;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button {
+  background-color: #8b7745;
+  border: 2px solid black;
+  color: white;
+  margin-right: 10px;
+}
+
+.cancel-button {
+  background-color: #848584;
+  border: 2px solid black;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  padding-right: 40px;
+}
+
+.valid-icon,
+.invalid-icon {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.valid-icon {
+  color: green;
+}
+
+.invalid-icon {
+  color: red;
+}
+
+.error-text {
+  color: red;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.invalid {
+  border: 2px solid red;
+}

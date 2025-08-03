@@ -1,0 +1,268 @@
+.character-selection-page {
+  display: flex;
+  height: calc(100vh - 40px);
+  width: 65vw;
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.character-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  background-color: #5e7a4e;
+  color: #fff;
+  width: 200px;
+  height: calc(100vh - 40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  border-radius: 10px 0 0 10px;
+}
+
+.leave-button01 {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.avatar-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.username {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.role {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.character-content {
+  flex: 1;
+  padding: 40px;
+  background: #fbe3a1;
+  overflow-y: auto;
+  border-radius: 0 10px 10px 0;
+}
+
+.character-box {
+  background-color: #ffe59c;
+  border: 3px solid #c78c30;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.character-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.character-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px 0;
+}
+
+.character-card {
+  text-align: center;
+}
+
+.character-image {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.select-button,
+.selected-button {
+  padding: 8px 16px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.select-button {
+  background-color: #58963b;
+  color: #fff;
+}
+
+.selected-button {
+  background-color: #ccc;
+  color: #333;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .character-selection-page {
+    flex-direction: column;
+    height: auto;
+    margin: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    flex-wrap: wrap;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .leave-button {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .profile-info {
+    margin-bottom: 10px;
+  }
+
+  .avatar-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .menu button {
+    font-size: 14px;
+  }
+
+  .character-content {
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .character-box {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .character-title {
+    font-size: 18px;
+  }
+
+  .character-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .character-image {
+    height: 60px;
+  }
+
+  .character-label {
+    font-size: 16px;
+  }
+
+  .select-button,
+  .selected-button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.character-card.selected .character-image {
+  animation: spin360 0.6s ease-in-out;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.character-image {
+  animation: jump 0.6s ease-out infinite alternate;
+}
