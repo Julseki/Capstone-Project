@@ -21,6 +21,7 @@ import Lobby from "./Components/LoginForm/Lobby";
 import Teacher from "./Components/LoginForm/Teacher";
 import TeacherMyClass from "./Components/LoginForm/TeacherMyClass";
 import TeacherViewClass from "./Components/LoginForm/TeacherViewClass";
+import ViewStudents from "./Components/LoginForm/ViewStudents";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/teacher" element={<Teacher />} />
           <Route path="/my-class-teacher" element={<TeacherMyClass />} />
           <Route path="/view-class-teacher" element={<TeacherViewClass />} />
+          <Route path="/view-students" element={<ViewStudents />} />
         </Routes>
       </div>
     </BrowserRouter>

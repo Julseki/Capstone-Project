@@ -25,7 +25,7 @@ const AccountType = () => {
             <FaChalkboardTeacher className="account-icon" />
             <span>Teacher</span>
           </div>
-        </div>
+        </div>          
       </form>
     </div>
   );

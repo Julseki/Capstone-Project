@@ -11,7 +11,7 @@ const TeacherViewClass = () => {
   };
 
   const handleEnterRoom = () => {
-    navigate("/student-class");
+    navigate("/view-students");
   };
 
   const handleProfileClick = () => {
@@ -99,7 +99,7 @@ const TeacherViewClass = () => {
                   <strong>SUBJECT:</strong> FILIPINO
                 </p>
                 <p>
-                  <strong>TEACHER:</strong> Nick Santos
+                  <strong>TEACHER:</strong> INSERT DELETE
                 </p>
               </div>
             </div>
