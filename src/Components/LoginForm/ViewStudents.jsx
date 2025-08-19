@@ -57,6 +57,14 @@ const ViewStudents = () => {
     },
   ];
 
+  const handleProfile = (student) => {
+    alert(`Viewing profile of ${student.name}`);
+  };
+
+  const handleRemove = (studentId) => {
+    alert(`Removing student with ID: ${studentId}`);
+  };
+
   return (
     <div className="view-student-container">
       <aside className="sidebar">
@@ -79,11 +87,9 @@ const ViewStudents = () => {
         </nav>
       </aside>
 
-      {/* Main Section */}
       <main className="students-section">
         <h1 className="students-title">STUDENTS</h1>
-
-        <div className="table-container">
+        <div className="table-wrapper">
           <table className="students-table">
             <thead>
               <tr>
@@ -91,17 +97,32 @@ const ViewStudents = () => {
                 <th>USERNAME</th>
                 <th>GENDER</th>
                 <th>EMAIL</th>
+                <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody>
-              {students.map((s, index) => (
+              {students.map((s, i) => (
                 <tr key={s.id}>
                   <td>
-                    {index + 1}. {s.name}
+                    {i + 1}. {s.name}
                   </td>
                   <td>{s.username}</td>
                   <td>{s.gender}</td>
                   <td>{s.email}</td>
+                  <td className="action-cell">
+                    <button
+                      className="profile-btn"
+                      onClick={() => handleProfile(s)}
+                    >
+                      Profile
+                    </button>
+                    <button
+                      className="remove-btn"
+                      onClick={() => handleRemove(s.id)}
+                    >
+                      Remove
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
