@@ -22,7 +22,7 @@ const CharacterSelection = () => {
 
   return (
     <div className="character-selection-page">
-      <aside className="sidebar">
+      <aside className="sidebar9">
         <button
           className="leave-button01"
           onClick={() => navigate("/view-class")}
@@ -32,7 +32,16 @@ const CharacterSelection = () => {
         <div className="profile-info">
           <img src="/Assets/mason.png" alt="Avatar" className="avatar-image" />
           <h1 className="username">InsertDelete.</h1>
-          <span className="role">STUDENT</span>
+          <span
+            style={{
+              fontFamily: "Poppins, sans-serif",
+              color: "#FFFFFF ",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
+            STUDENT
+          </span>
         </div>
         <nav className="menu">
           <button onClick={() => navigate("/join-game")}>
@@ -44,7 +53,7 @@ const CharacterSelection = () => {
           <button onClick={() => navigate("/leaderboards")}>
             <FaTrophy /> LEADERBOARDS
           </button>
-          <button>
+          <button className="active">
             <FaHatWizard /> CHARACTER
           </button>
         </nav>

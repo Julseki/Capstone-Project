@@ -28,7 +28,7 @@ const AccountTypeStudent = () => {
 
   return (
     <form className="accounttype-student-form">
-      <h2 className="form-title">Account Type: Student</h2>
+      <h2 className="form-title">ACCOUNT TYPE: STUDENT</h2>
       <input type="text" placeholder="First Name" />
       <input type="text" placeholder="Last Name" />
       <div className="birthdate-group">

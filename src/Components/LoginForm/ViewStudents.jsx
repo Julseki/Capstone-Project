@@ -1,6 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/ViewStudent.css";
+import {
+  FaArrowLeft,
+  FaUsers,
+  FaTrophy,
+  FaGamepad,
+  FaClipboardList,
+  FaUserGraduate,
+} from "react-icons/fa";
 
 const ViewStudents = () => {
   const navigate = useNavigate();
@@ -67,28 +75,42 @@ const ViewStudents = () => {
 
   return (
     <div className="view-student-container">
-      <aside className="sidebar">
-        <div className="teacher-profile">
-          <img src="/Assets/avatar.png" alt="avatar" className="avatar-image" />
-          <h2>Mr. John</h2>
-          <p>TEACHER</p>
-        </div>
-        <nav className="menu">
-          <button onClick={() => navigate("/view-students")}>
-            👥 VIEW STUDENTS
-          </button>
-          <button onClick={() => navigate("/leaderboards")}>
-            🏆 LEADERBOARDS
-          </button>
-          <button onClick={() => navigate("/create-quiz")}>
-            🎮 CREATE QUIZ
-          </button>
-          <button onClick={() => navigate("/my-quizzes")}>📒 MY QUIZZES</button>
-        </nav>
-      </aside>
+      <aside className="sidebar10">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <FaArrowLeft /> BACK
+        </button>
 
+        <div className="profile-section">
+          <img src="/Assets/avatar.png" alt="avatar" className="avatar-image" />
+          <h2 className="teacher-name">Mr. John</h2>
+          <p className="role">TEACHER</p>
+        </div>
+
+        <div className="menu">
+          <div
+            className="menu-item active"
+            onClick={() => navigate("/view-students")}
+          >
+            <FaUsers /> VIEW STUDENTS
+          </div>
+          <div
+            className="menu-item"
+            onClick={() => navigate("/teacher-leaderboards")}
+          >
+            <FaTrophy /> LEADERBOARDS
+          </div>
+          <div className="menu-item" onClick={() => navigate("/create-quiz")}>
+            <FaGamepad /> CREATE QUIZ
+          </div>
+          <div className="menu-item" onClick={() => navigate("/my-quizzes")}>
+            <FaClipboardList /> MY QUIZZES
+          </div>
+        </div>
+      </aside>
       <main className="students-section">
-        <h1 className="students-title">STUDENTS</h1>
+        <h1 className="students-title">
+          <FaUserGraduate className="student-logo" /> STUDENTS
+        </h1>
         <div className="table-wrapper">
           <table className="students-table">
             <thead>

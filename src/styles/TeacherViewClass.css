@@ -2,6 +2,9 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .view-class-container {
   background-color: #778f51;
@@ -129,7 +132,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* 📱 Tablet */
 @media (max-width: 768px) {
   .view-class-container {
     padding: 15px;
@@ -159,7 +161,6 @@
   }
 }
 
-/* 📱 Mobile */
 @media (max-width: 480px) {
   .class-actions {
     flex-direction: column;

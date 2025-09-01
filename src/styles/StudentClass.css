@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 * {
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -18,15 +18,16 @@ h1 {
   margin-bottom: 20px;
   color: white;
 }
-.sidebar0 {
-  width: 220px;
-  background-color: #48623a;
+.sidebar8 {
+  width: 240px;
+  background-color: #5f8f4f;
   color: white;
-  padding: 20px;
+  gap: 10px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 85vh;
   border-radius: 15px 0px 0px 15px;
 }
@@ -66,7 +67,7 @@ img.avatar {
 }
 
 .role {
-  font-size: 0.9rem;
+  font-size: 1.9rem;
   opacity: 0.8;
 }
 
@@ -81,7 +82,8 @@ img.avatar {
   background: none;
   border: none;
   color: white;
-  font-size: 1rem;
+  font-size: 20px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -89,7 +91,7 @@ img.avatar {
 }
 
 .main-content {
-  background-color: #fbe7b2;
+  background-color: #ffeecb;
   padding: 40px;
   position: center;
   overflow-y: auto;
@@ -98,6 +100,7 @@ img.avatar {
   height: 85vh;
   min-width: 300px;
   border-radius: 0% 10px 10px 0px;
+  box-shadow: inset 0 0 0 1000px #ffeecb;
 }
 
 .progress {
@@ -110,7 +113,7 @@ img.avatar {
 }
 
 .progress-box {
-  background-color: #e5e0b3;
+  background-color: #5f8f4f;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -123,8 +126,17 @@ img.avatar {
 }
 
 .progress-box p {
+  font-size: 20px;
   font-weight: bold;
-  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  -webkit-text-stroke: 1px #000000;
+}
+h3 {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  -webkit-text-stroke: 0.8px #000000;
 }
 
 .badges-section h3 {
@@ -138,7 +150,7 @@ img.avatar {
 }
 
 .badge {
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 8px;
   color: white;
   font-weight: bold;
@@ -205,6 +217,9 @@ img.avatar {
 }
 .Trophy {
   filter: drop-shadow(0 0 4px #b08968);
+}
+p {
+  -webkit-text-stroke: 0px transparent !important;
 }
 
 @media (max-width: 768px) {

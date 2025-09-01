@@ -33,11 +33,10 @@ const avatarList = [
 ];
 
 const SetProfile = () => {
-  const [selectedAvatar, setSelectedAvatar] = useState("InsertDelete.");
+  const [selectedAvatar, setSelectedAvatar] = useState("Adrian");
   const [username, setUsername] = useState("InsertDelete.");
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [hasCustomUsername, setHasCustomUsername] = useState(false);
-  const [showAvatarSelection, setShowAvatarSelection] = useState(true);
   const [spinKey, setSpinKey] = useState(null);
 
   const navigate = useNavigate();
@@ -53,21 +52,35 @@ const SetProfile = () => {
         </button>
         <div className="sidebar-profile">
           <img
-            src={`/Assets/${selectedAvatar}.png`}
+            src={
+              selectedAvatar
+                ? `/Assets/${selectedAvatar}.png`
+                : "/Assets/Adrian.png"
+            }
             alt="Selected Avatar"
             className={`avatar-large ${
               spinKey === selectedAvatar ? "spin" : ""
             }`}
           />
-          <h1 className="username">{username}</h1>
-          <span className="role">STUDENT</span>
         </div>
+
+        <h1 className="username">{username}</h1>
+        <span
+          style={{
+            fontFamily: "Poppins, sans-serif",
+            color: "#FFFFFF ",
+            fontSize: "16px",
+            fontWeight: "bold",
+          }}
+        >
+          STUDENT
+        </span>
 
         <nav className="menu">
           <button onClick={() => navigate("/join-game")}>
             <FaGamepad /> JOIN GAME
           </button>
-          <button onClick={() => navigate("/set-profile")}>
+          <button className="active">
             <FaUser /> PROFILE
           </button>
           <button onClick={() => navigate("/leaderboards")}>
@@ -103,20 +116,24 @@ const SetProfile = () => {
 
           <div className="input-row">
             <label>FULL NAME</label>
-            <input type="text" defaultValue="Apatan, Nick Andrei" />
+            <input type="text" placeholder="Enter full name" />
           </div>
+
           <div className="input-row">
             <label>GENDER</label>
-            <input type="text" defaultValue="Male" />
+            <input type="text" placeholder="Enter gender" />
           </div>
+
           <div className="input-row">
             <label>GRADE LEVEL</label>
-            <input type="text" defaultValue="3rd Grade" />
+            <input type="text" placeholder="Enter grade level" />
           </div>
+
           <div className="input-row">
             <label>SECTION</label>
-            <input type="text" defaultValue="Sampaguita" />
+            <input type="text" placeholder="Enter section" />
           </div>
+
           <div className="form-buttons">
             <button
               className="save-button"

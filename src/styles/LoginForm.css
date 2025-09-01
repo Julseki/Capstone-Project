@@ -2,8 +2,10 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 
 .wrapper {
   width: 420px;
@@ -13,8 +15,9 @@
 .wrapper h1 {
   font-size: 36px;
   text-align: center;
-  -webkit-text-stroke: 1.3px black;
   font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 1px black;
 }
 
 .wrapper .input-box {
@@ -30,22 +33,15 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  padding: 20px 45px 20px 20px;
-}
-
-.input-box input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
   border: 2px solid black;
   border-radius: 10px;
   color: #000;
   padding: 0.75rem 1rem;
   font-size: 1rem;
+}
+
+.input-box input::placeholder {
+  color: #555;
 }
 
 .button-container {
@@ -63,30 +59,32 @@
 
 .button-group button {
   width: 200px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 0.75rem 1rem;
   border: 2px solid black;
   border-radius: 10px;
-  padding: 0.75rem 1rem;
   font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .login-button {
   background-color: #778f51;
-  color: white;
-  -webkit-text-stroke: 1px black;
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .signup-button {
   background-color: #877242;
-  color: white;
-  -webkit-text-stroke: 1px black;
-  font-size: 20px;
-  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.signup-button:hover,
+.button-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .or-separator {
@@ -94,5 +92,22 @@
   color: #fff;
   padding: 10px 0;
   text-align: center;
-  -webkit-text-stroke: 1px black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.icon,
+button svg,
+svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.7));
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.icon:hover,
+button svg:hover,
+svg:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.8));
 }

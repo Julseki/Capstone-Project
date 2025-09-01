@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaSignOutAlt, FaGamepad, FaUser, FaTrophy } from "react-icons/fa";
+import { MdSportsEsports } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import "../../styles/JoinGame.css";
 
@@ -54,7 +55,16 @@ const JoinGame = () => {
         <div className="profile-info">
           <img src="/Assets/avatar.png" alt="avatar" className="avatar-image" />
           <h1 className="username">InsertDelete.</h1>
-          <span className="role">STUDENT</span>
+          <span
+            style={{
+              fontFamily: "Poppins, sans-serif",
+              color: "#FFFFFF ",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
+            STUDENT
+          </span>
         </div>
         <nav className="menu">
           <button className="active">
@@ -71,9 +81,9 @@ const JoinGame = () => {
 
       <main className="join-game-content">
         <h2 className="game-title">
-          <FaGamepad /> GAME
+          <MdSportsEsports className="game-icon" />
+          GAME
         </h2>
-
         {!showQuizForm ? (
           <div className="game-list">
             {games.map((game, index) => (
@@ -114,10 +124,6 @@ const JoinGame = () => {
             <div className="quiz-buttons">
               <button className="join-btn" onClick={() => navigate("/lobby")}>
                 JOIN GAME
-              </button>
-
-              <button className="back-btn" onClick={handleBackClick}>
-                BACK
               </button>
             </div>
           </div>
