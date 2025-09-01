@@ -28,7 +28,7 @@ const StudentClass = () => {
         <span className="notification-text"></span>
       </div>
 
-      <aside className="sidebar0">
+      <aside className="sidebar8">
         <button
           className="leave-button"
           onClick={() => navigate("/view-class")}
@@ -45,7 +45,16 @@ const StudentClass = () => {
           />
 
           <h1 className="username">InsertDelete.</h1>
-          <span className="role">STUDENT</span>
+          <span
+            style={{
+              fontFamily: "Poppins, sans-serif",
+              color: "#FFFFFF ",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
+            STUDENT
+          </span>
         </div>
         <nav className="menu">
           <button

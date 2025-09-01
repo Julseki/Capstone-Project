@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/Lobby.css";
 import { useNavigate } from "react-router-dom";
 
@@ -9,9 +9,11 @@ const Lobby = () => {
     { id: 1, avatar: "/Assets/avatar.png" },
     { id: 2, avatar: "/Assets/adrian.png" },
     { id: 3, avatar: "/Assets/andrea.png" },
-    { id: 4, avatar: "/Assets/byron.png" },
-    { id: 5, avatar: "" },
-    { id: 6, avatar: "" },
+    { id: 4, avatar: "/Assets/eliza.png" },
+    { id: 5, avatar: "/Assets/emery.png" },
+    { id: 6, avatar: "/Assets/kimberly.png" },
+    { id: 7, avatar: "/Assets/leah.png" },
+    { id: 8, avatar: "/Assets/liliana.png" },
   ];
 
   return (
@@ -24,10 +26,7 @@ const Lobby = () => {
           <div className="player-list-header">Players</div>
           <div className="player-list-slots">
             {players.map((player) => (
-              <div
-                key={player.id}
-                className={`player-slot ${player.avatar ? "filled" : "empty"}`}
-              >
+              <div key={player.id} className={`player-slot filled`}>
                 {player.avatar ? (
                   <img
                     src={player.avatar}
@@ -35,7 +34,7 @@ const Lobby = () => {
                     className="player-avatar"
                   />
                 ) : (
-                  <div className="empty-slot-placeholder"></div>
+                  <div className="empty-avatar-placeholder"></div>
                 )}
               </div>
             ))}

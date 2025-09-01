@@ -9,7 +9,7 @@ const AccountType = () => {
   return (
     <div className="accounttype-wrapper">
       <form>
-        <p>Select Account Type</p>
+        <p>SELECT ACCOUNT TYPE</p>
         <div className="accounttype-box-container">
           <div
             className="accounttype-box student-box"

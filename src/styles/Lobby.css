@@ -1,3 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1.lobby-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  -webkit-text-stroke: 1.2px black;
+  letter-spacing: 1px;
+  background-color: #787373;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .lobby-container {
   display: flex;
   background-color: #a68e52;
@@ -8,39 +30,30 @@
   border: 2px solid #000000;
 }
 
-.lobby-main {
-  flex: 1;
-  padding: 20px;
-  background-size: cover;
-  position: relative;
-}
-
-.lobby-title {
-  text-align: center;
-  font-size: 32px;
-  color: white;
-  font-weight: bold;
-}
 .lobby-waiting {
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
-  color: white;
-  margin: 10px 0;
+  color: #ffffff;
+  margin-top: 20px;
+  -webkit-text-stroke: 0.9px black;
 }
 
 .player-list {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  max-height: 60vh;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 10px;
   border-radius: 8px;
 }
 
 .player-list-header {
-  font-size: 14px;
+  font-size: 25px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
   margin-bottom: 8px;
+  -webkit-text-stroke: 0.9px black;
 }
 
 .player-list-slots {
@@ -50,21 +63,34 @@
 }
 
 .player-slot {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 6px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  -webkit-text-stroke: 0.8px black;
 }
 
 .player-slot.filled {
   background-color: #8eae5c;
-  height: 100px;
+  height: 50px;
+  color: #ffffff;
 }
 
 .player-avatar {
-  height: 30px;
+  height: 80%;
+  animation: spin360 2s linear infinite;
+}
+.lobby-main {
+  flex: 1;
+  padding: 20px;
+  background-size: cover;
+  position: relative;
+  font-family: "Poppins", sans-serif;
 }
 
 .lobby-sidebar {
@@ -75,27 +101,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-color: #000000;
   gap: 50px;
   padding: 80px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
 }
-
 .lobby-btn {
   background: none;
   border: none;
   color: white;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-weight: bold;
+  -webkit-text-stroke: 0.8px black;
 }
 
 .lobby-btn img {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+span {
+  -webkit-text-stroke: 0px !important;
+  color: #ffffff;
 }
 
 @keyframes spin360 {
@@ -105,9 +137,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.player-avatar {
-  height: 30px;
-  animation: spin360 2s linear infinite;
 }

@@ -1,112 +1,155 @@
 import React from "react";
-import "../../styles/ViewStudents.css";
 import { useNavigate } from "react-router-dom";
-import { FaArrowLeft, FaUsers, FaTrophy, FaEdit, FaBook } from "react-icons/fa";
-
-const students = [
-  {
-    name: "Apatan, Nick Andrei",
-    username: "Natanukkin04",
-    gender: "Male",
-    email: "nickandrei.apatan@normi.edu.ph",
-  },
-  {
-    name: "Capon, Rosa Angelica C.",
-    username: "Rosa14",
-    gender: "Female",
-    email: "rosaangelica.capon@normi.edu.ph",
-  },
-  {
-    name: "Guy-ab, Julse",
-    username: "Circle",
-    gender: "Male",
-    email: "julse.guy-ab@normi.edu.ph",
-  },
-  {
-    name: "Bengin Nanales",
-    username: "Pato40",
-    gender: "Male",
-    email: "bengin.nanales@normi.edu.ph",
-  },
-  {
-    name: "Devilleres, Prince Angelo A.",
-    username: "Masuek14",
-    gender: "Male",
-    email: "princeangelo.devilleres@normi.edu.ph",
-  },
-  {
-    name: "Maraveles, Mika Althea",
-    username: "Miks<3",
-    gender: "Female",
-    email: "mikaalthea.maraveles@normi.edu.ph",
-  },
-  {
-    name: "Balacuit, Jhuvin",
-    username: "JhuvinNgaPala",
-    gender: "Male",
-    email: "jhuvin.balacuit@normi.edu.ph",
-  },
-];
+import "../../styles/ViewStudent.css";
+import {
+  FaArrowLeft,
+  FaUsers,
+  FaTrophy,
+  FaGamepad,
+  FaClipboardList,
+  FaUserGraduate,
+} from "react-icons/fa";
 
 const ViewStudents = () => {
   const navigate = useNavigate();
 
-  return (
-    <div className="view-students-page">
-      <aside className="sidebar">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <FaArrowLeft />
-          BACK
-        </button>
-        <div className="profile">
-          <div className="avatar" />
-          <h3>Mr. John</h3>
-          <span className="role">TEACHER</span>
-        </div>
-        <nav className="menu">
-          <button className="menu-item active">
-            <FaUsers />
-            VIEW STUDENTS
-          </button>
-          <button className="menu-item">
-            <FaTrophy />
-            LEADERBOARDS
-          </button>
-          <button className="menu-item">
-            <FaEdit />
-            CREATE QUIZ
-          </button>
-          <button className="menu-item">
-            <FaBook />
-            MY QUIZZES
-          </button>
-        </nav>
-      </aside>
+  const students = [
+    {
+      id: 1,
+      name: "Apatan, Nick Andrei",
+      username: "Natanukin04",
+      gender: "Male",
+      email: "nickandrei.apatan@normi.edu.ph",
+    },
+    {
+      id: 2,
+      name: "Capon, Rosa Angelica C.",
+      username: "Rosa14",
+      gender: "Female",
+      email: "rosaangelica.capon@normi.edu.ph",
+    },
+    {
+      id: 3,
+      name: "Guy-ab, Julse",
+      username: "Circle",
+      gender: "Male",
+      email: "julse.guy-ab@normi.edu.ph",
+    },
+    {
+      id: 4,
+      name: "Bengin Nanales",
+      username: "Pato40",
+      gender: "Male",
+      email: "bengin.nanales@normi.edu.ph",
+    },
+    {
+      id: 5,
+      name: "Devilleres, Prince Angelo A.",
+      username: "Masuke14",
+      gender: "Male",
+      email: "princeangelo.devilleres@normi.edu.ph",
+    },
+    {
+      id: 6,
+      name: "Maraveles, Mika Althea",
+      username: "Miks69",
+      gender: "Female",
+      email: "mikaalthea.maraveles@normi.edu.ph",
+    },
+    {
+      id: 7,
+      name: "Balacuit, Jhuvin",
+      username: "JhuvinNgaPala",
+      gender: "Male",
+      email: "jhuvin.balacuit@normi.edu.ph",
+    },
+  ];
 
-      <main className="main-content">
-        <h1 className="section-title">STUDENTS</h1>
-        <table className="students-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>NAME</th>
-              <th>USERNAME</th>
-              <th>GENDER</th>
-              <th>EMAIL</th>
-            </tr>
-          </thead>
-          <tbody>
-            {students.map((student, index) => (
-              <tr key={index}>
-                <td>{index + 1}.</td>
-                <td>{student.name}</td>
-                <td>{student.username}</td>
-                <td>{student.gender}</td>
-                <td>{student.email}</td>
+  const handleProfile = (student) => {
+    alert(`Viewing profile of ${student.name}`);
+  };
+
+  const handleRemove = (studentId) => {
+    alert(`Removing student with ID: ${studentId}`);
+  };
+
+  return (
+    <div className="view-student-container">
+      <aside className="sidebar10">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <FaArrowLeft /> BACK
+        </button>
+
+        <div className="profile-section">
+          <img src="/Assets/avatar.png" alt="avatar" className="avatar-image" />
+          <h2 className="teacher-name">Mr. John</h2>
+          <p className="role">TEACHER</p>
+        </div>
+
+        <div className="menu">
+          <div
+            className="menu-item active"
+            onClick={() => navigate("/view-students")}
+          >
+            <FaUsers /> VIEW STUDENTS
+          </div>
+          <div
+            className="menu-item"
+            onClick={() => navigate("/teacher-leaderboards")}
+          >
+            <FaTrophy /> LEADERBOARDS
+          </div>
+          <div className="menu-item" onClick={() => navigate("/create-quiz")}>
+            <FaGamepad /> CREATE QUIZ
+          </div>
+          <div className="menu-item" onClick={() => navigate("/my-quizzes")}>
+            <FaClipboardList /> MY QUIZZES
+          </div>
+        </div>
+      </aside>
+      <main className="students-section">
+        <h1 className="students-title">
+          <FaUserGraduate className="student-logo" /> STUDENTS
+        </h1>
+        <div className="table-wrapper">
+          <table className="students-table">
+            <thead>
+              <tr>
+                <th>NAME</th>
+                <th>USERNAME</th>
+                <th>GENDER</th>
+                <th>EMAIL</th>
+                <th>ACTIONS</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {students.map((s, i) => (
+                <tr key={s.id}>
+                  <td>
+                    {i + 1}. {s.name}
+                  </td>
+                  <td>{s.username}</td>
+                  <td>{s.gender}</td>
+                  <td>{s.email}</td>
+                  <td className="action-cell">
+                    <button
+                      className="profile-btn"
+                      onClick={() => handleProfile(s)}
+                    >
+                      Profile
+                    </button>
+                    <button
+                      className="remove-btn"
+                      onClick={() => handleRemove(s.id)}
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </main>
     </div>
   );

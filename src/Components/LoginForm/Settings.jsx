@@ -49,27 +49,18 @@ const Settings = () => {
 
   useEffect(() => {
     const savedSettings = localStorage.getItem("userSettings");
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
+    if (savedSettings) setSettings(JSON.parse(savedSettings));
   }, []);
-
   const t = translations[settings.language];
 
   const handleSave = () => {
     localStorage.setItem("userSettings", JSON.stringify(settings));
-    console.log("Settings saved:", settings);
     navigate("/student-home");
   };
 
-  const handleBack = () => {
-    navigate("/student-home");
-  };
+  const handleBack = () => navigate("/student-home");
 
-  const handleDiscard = () => {
-    setSettings(defaultSettings);
-    console.log("Settings discarded");
-  };
+  const handleDiscard = () => setSettings(defaultSettings);
 
   return (
     <div className="settings-container">
@@ -79,135 +70,121 @@ const Settings = () => {
       </header>
 
       <main className="settings-main">
-        <div className="settings-content">
-          <section className="settings-section">
-            <h2 className="section-title">{t.notifications}</h2>
-            <div className="notification-row">
-              <div className="notification-item">
-                <span className="notification-label">{t.gameInvitation}</span>
-                <label className="toggle-switch">
-                  <input
-                    type="checkbox"
-                    checked={settings.gameInvitation}
-                    onChange={(e) =>
-                      setSettings({
-                        ...settings,
-                        gameInvitation: e.target.checked,
-                      })
-                    }
-                  />
-                  <span className="slider"></span>
-                </label>
-              </div>
-              <div className="notification-item">
-                <span className="notification-label">{t.classActivity}</span>
-                <label className="toggle-switch">
-                  <input
-                    type="checkbox"
-                    checked={settings.classActivity}
-                    onChange={(e) =>
-                      setSettings({
-                        ...settings,
-                        classActivity: e.target.checked,
-                      })
-                    }
-                  />
-                  <span className="slider"></span>
-                </label>
-              </div>
-            </div>
-          </section>
-
-          <section className="settings-section">
-            <h2 className="section-title">{t.soundEffects}</h2>
-            <div className="sound-controls">
-              <div className="sound-item">
-                <FaVolumeUp className="sound-icon" />
-                <span className="sound-label">{t.sound}</span>
-                <div className="slider-container">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={settings.soundVolume}
-                    onChange={(e) =>
-                      setSettings({
-                        ...settings,
-                        soundVolume: Number(e.target.value),
-                      })
-                    }
-                    className="volume-slider"
-                  />
-                  <span className="volume-percentage">
-                    {settings.soundVolume}%
-                  </span>
-                </div>
-              </div>
-              <div className="sound-item">
-                <FaMusic className="sound-icon" />
-                <span className="sound-label">{t.music}</span>
-                <div className="slider-container">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={settings.musicVolume}
-                    onChange={(e) =>
-                      setSettings({
-                        ...settings,
-                        musicVolume: Number(e.target.value),
-                      })
-                    }
-                    className="volume-slider"
-                  />
-                  <span className="volume-percentage">
-                    {settings.musicVolume}%
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="settings-section">
-            <h2 className="section-title">{t.languagePreferences}</h2>
-            <div className="language-options">
-              <label className="language-option">
+        <section className="settings-section">
+          <h2 className="section-title">{t.notifications}</h2>
+          <div className="notification-row">
+            <div className="notification-item">
+              <span className="notification-label">{t.gameInvitation}</span>
+              <label className="toggle-switch">
                 <input
-                  type="radio"
-                  name="language"
-                  value="english"
-                  checked={settings.language === "english"}
+                  type="checkbox"
+                  checked={settings.gameInvitation}
                   onChange={(e) =>
-                    setSettings({ ...settings, language: e.target.value })
+                    setSettings({
+                      ...settings,
+                      gameInvitation: e.target.checked,
+                    })
                   }
                 />
-                <span className="radio-custom"></span>
-                <span className="language-label">{t.english}</span>
-              </label>
-              <label className="language-option">
-                <input
-                  type="radio"
-                  name="language"
-                  value="filipino"
-                  checked={settings.language === "filipino"}
-                  onChange={(e) =>
-                    setSettings({ ...settings, language: e.target.value })
-                  }
-                />
-                <span className="radio-custom"></span>
-                <span className="language-label">{t.filipino}</span>
+                <span className="slider"></span>
               </label>
             </div>
-          </section>
-
-          <div className="action-buttons">
-            <button className="save-btn" onClick={handleSave}>
-              {t.save}
-            </button>
-            <button className="discard-btn" onClick={handleDiscard}>
-              {t.discard}
-            </button>
+            <div className="notification-item">
+              <span className="notification-label">{t.classActivity}</span>
+              <label className="toggle-switch">
+                <input
+                  type="checkbox"
+                  checked={settings.classActivity}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      classActivity: e.target.checked,
+                    })
+                  }
+                />
+                <span className="slider"></span>
+              </label>
+            </div>
           </div>
+        </section>
+
+        <section className="settings-section">
+          <h2 className="section-title">{t.soundEffects}</h2>
+          <div className="sound-controls">
+            <div className="sound-item">
+              <FaVolumeUp className="sound-icon" />
+              <span className="sound-label">{t.sound}</span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={settings.soundVolume}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    soundVolume: Number(e.target.value),
+                  })
+                }
+              />
+              <span className="volume-percentage">{settings.soundVolume}%</span>
+            </div>
+            <div className="sound-item">
+              <FaMusic className="sound-icon" />
+              <span className="sound-label">{t.music}</span>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={settings.musicVolume}
+                onChange={(e) =>
+                  setSettings({
+                    ...settings,
+                    musicVolume: Number(e.target.value),
+                  })
+                }
+              />
+              <span className="volume-percentage">{settings.musicVolume}%</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="settings-section">
+          <h2 className="section-title">{t.languagePreferences}</h2>
+          <label className="language-option">
+            <input
+              type="radio"
+              name="language"
+              value="english"
+              checked={settings.language === "english"}
+              onChange={(e) =>
+                setSettings({ ...settings, language: e.target.value })
+              }
+            />
+            <span className="radio-custom"></span>
+            <span className="language-label">{t.english}</span>
+          </label>
+          <label className="language-option">
+            <input
+              type="radio"
+              name="language"
+              value="filipino"
+              checked={settings.language === "filipino"}
+              onChange={(e) =>
+                setSettings({ ...settings, language: e.target.value })
+              }
+            />
+            <span className="radio-custom"></span>
+            <span className="language-label">{t.filipino}</span>
+          </label>
+        </section>
+
+        <div className="action-buttons">
+          <button className="save-btn" onClick={handleSave}>
+            {t.save}
+          </button>
+          <button className="discard-btn" onClick={handleDiscard}>
+            {t.discard}
+          </button>
         </div>
       </main>
     </div>

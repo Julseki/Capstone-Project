@@ -2,6 +2,9 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .view-class-container {
   background-color: #778f51;
@@ -31,8 +34,8 @@
   margin: 0 auto;
 }
 
-.class-card1 {
-  background-color: #f3ce76;
+.class-card1,
+.class-card2 {
   border: 2px solid #8b7355;
   border-radius: 12px;
   padding: 20px;
@@ -41,21 +44,18 @@
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
+}
+
+.class-card1 {
+  background-color: #f3ce76;
 }
 
 .class-card2 {
   background-color: #8b7745;
-  border: 2px solid #8b7355;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
 }
 
-.class-card:hover {
+.class-card1:hover,
+.class-card2:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -68,7 +68,7 @@
   margin: 8px 0;
   color: #2c2c2c;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 1000;
 }
 
 .class-details strong {
@@ -142,7 +142,8 @@
     font-size: 2rem;
   }
 
-  .class-card {
+  .class-card1,
+  .class-card2 {
     flex-direction: column;
     text-align: center;
     gap: 15px;
@@ -164,6 +165,7 @@
   .class-actions {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
   }
 
   .enter-room-btn {

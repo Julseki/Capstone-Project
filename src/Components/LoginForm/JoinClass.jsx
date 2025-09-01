@@ -38,11 +38,10 @@ const JoinClass = () => {
   return (
     <div className="student-home-container">
       <header className="student-home-header">
-        <div className="header-left"></div>
         <div className="header-icons">
           <div className="header-box1">
             <FaUserCircle className="icon" />
-            <span>Profile</span>
+            <span>PROFILE</span>
           </div>
           <div
             className="header-box2"
@@ -50,38 +49,48 @@ const JoinClass = () => {
             style={{ cursor: "pointer" }}
           >
             <FaCog className="icon" />
-            <span>Settings</span>
+            <span>SETTINGS</span>
           </div>
-
           <div
             className="header-box3"
             onClick={handleLogout}
             style={{ cursor: "pointer" }}
           >
             <FaSignOutAlt className="icon" />
-            <span>Logout</span>
+            <span>LOGOUT</span>
           </div>
         </div>
       </header>
 
       <div className="container">
-        <h1>ENTER A CLASS CODE</h1>
+        <h1 className="class-heading">
+          <svg
+            className="heading-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3 2v20h18V2h-7V0h9v24H1V0h9zM16 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+          </svg>
+          <span>ENTER A CLASS CODE</span>
+        </h1>
+
         <div className="input-wrapper">
           <input
             type="text"
             className={`input-field ${isValid === false ? "invalid" : ""}`}
             value={classCode}
             onChange={handleInputChange}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSubmit();
+              }
+            }}
           />
           {isValid === true && <FaCheckCircle className="valid-icon" />}
           {isValid === false && <FaTimesCircle className="invalid-icon" />}
         </div>
-
-        {isValid === false && (
-          <p className="error-text">Invalid code. Please try again.</p>
-        )}
-
-        <div>
+        <div className="button-container">
           <button className="button submit-button" onClick={handleSubmit}>
             SUBMIT
           </button>
@@ -89,6 +98,9 @@ const JoinClass = () => {
             CANCEL
           </button>
         </div>
+        {isValid === false && (
+          <p className="error-text">INVALID CODE. PLEASE TRY AGAIN.</p>
+        )}
       </div>
     </div>
   );

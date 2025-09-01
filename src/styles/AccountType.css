@@ -3,6 +3,8 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .accounttype-wrapper {
@@ -16,8 +18,9 @@
 p {
   font-size: 36px;
   text-align: center;
-  -webkit-text-stroke: 1.3px black;
   font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 1px black;
 }
 
 .accounttype-box-container {
@@ -39,7 +42,26 @@ p {
   transition: transform 0.3s;
   font-weight: 600;
   font-size: 18px;
-  -webkit-text-stroke: 0.5px black;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  box-shadow: none;
+  gap: 15px;
+}
+
+.account-icon {
+  font-size: 80px;
+  margin: 0;
+  line-height: 1;
+  filter: none;
+}
+
+.accounttype-box span {
+  -webkit-text-stroke: 1px black;
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
 }
 
 .student-box {
@@ -54,9 +76,5 @@ p {
 
 .accounttype-box:hover {
   transform: scale(1.05);
-}
-
-.account-icon {
-  font-size: 40px;
-  margin-bottom: 10px;
+  box-shadow: none;
 }

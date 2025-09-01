@@ -44,7 +44,7 @@ const StudentHome = () => {
             style={{ cursor: "pointer" }}
           >
             <FaUserCircle className="icon" />
-            <span>Profile</span>
+            <span>PROFILE</span>
           </div>
 
           <div
@@ -53,7 +53,7 @@ const StudentHome = () => {
             style={{ cursor: "pointer" }}
           >
             <FaCog className="icon" />
-            <span>Settings</span>
+            <span>SETTINGS</span>
           </div>
 
           <div
@@ -62,23 +62,35 @@ const StudentHome = () => {
             style={{ cursor: "pointer" }}
           >
             <FaSignOutAlt className="icon" />
-            <span>Logout</span>
+            <span>LOGOUT</span>
           </div>
         </div>
       </header>
 
       <main className="student-home-main">
         <div className="home-box1" onClick={handleJoinClassClick}>
-          <FaDoorOpen className="home-icon1" />
-          <span>Join Class</span>
+          <FaDoorOpen
+            className="svghome-icon"
+            size={80}
+            style={{ stroke: "black", strokeWidth: 10 }}
+          />
+          <span>JOIN CLASS</span>
         </div>
         <div className="home-box2" onClick={handleMyClassClick}>
-          <FaChalkboardTeacher className="home-icon2" />
-          <span>My Class</span>
+          <FaChalkboardTeacher
+            className="svghome-icon"
+            size={80}
+            style={{ stroke: "black", strokeWidth: 10 }}
+          />
+          <span>MY CLASS</span>
         </div>
         <div className="home-box3" onClick={handleShopClick}>
-          <FaShoppingCart className="home-icon3" />
-          <span>Shop</span>
+          <FaShoppingCart
+            className="svghome-icon"
+            size={80}
+            style={{ stroke: "black", strokeWidth: 10 }}
+          />
+          <span>SHOP</span>
         </div>
       </main>
     </div>

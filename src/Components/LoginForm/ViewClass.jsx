@@ -6,116 +6,80 @@ import { useNavigate } from "react-router-dom";
 const ViewClass = () => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    navigate("/");
-  };
-
-  const handleEnterRoom = () => {
-    navigate("/student-class");
-  };
-
-  const handleProfileClick = () => {
-    navigate("/set-profile");
-  };
-  const handleSettingsClick = () => {
-    navigate("/settings");
-  };
+  const handleLogout = () => navigate("/");
+  const handleEnterRoom = () => navigate("/student-class");
+  const handleProfileClick = () => navigate("/set-profile");
+  const handleSettingsClick = () => navigate("/settings");
+  const classes = [
+    {
+      grade: 3,
+      section: "SAMPAGUITA",
+      subject: "MATH",
+      teacher: "JOHN DOE",
+      code: "ABC123",
+      type: "class-card1",
+    },
+    {
+      grade: 3,
+      section: "ROSE",
+      subject: "FILIPINO",
+      teacher: "JANE SMITH",
+      code: "DEF456",
+      type: "class-card2",
+    },
+  ];
 
   return (
     <div className="student-home-container">
       <header className="student-home-header">
-        <div className="header-left"></div>
         <div className="header-icons">
-          <div
-            className="header-box1"
-            onClick={handleProfileClick}
-            style={{ cursor: "pointer" }}
-          >
+          <div className="header-box1" onClick={handleProfileClick}>
             <FaUserCircle className="icon" />
-            <span>Profile</span>
+            <span>PROFILE</span>
           </div>
-          <div
-            className="header-box2"
-            onClick={handleSettingsClick}
-            style={{ cursor: "pointer" }}
-          >
+          <div className="header-box2" onClick={handleSettingsClick}>
             <FaCog className="icon" />
-            <span>Settings</span>
+            <span>SETTINGS</span>
           </div>
-          <div
-            className="header-box3"
-            onClick={handleLogout}
-            style={{ cursor: "pointer" }}
-          >
+          <div className="header-box3" onClick={handleLogout}>
             <FaSignOutAlt className="icon" />
-            <span>Logout</span>
+            <span>LOGOUT</span>
           </div>
         </div>
       </header>
-      <div className="view-class-container">
-        <h1>MY CLASS</h1>
-        <div className="class-list">
-          <div className="class-card1">
-            <div className="class-info">
-              <div className="class-details">
-                <p>
-                  <strong>GRADE LEVEL:</strong> 3
-                </p>
-                <p>
-                  <strong>SECTION:</strong> SAMPAGUITA
-                </p>
-                <p>
-                  <strong>SUBJECT:</strong> MATH
-                </p>
-                <p>
-                  <strong>TEACHER:</strong> John Doe
-                </p>
-              </div>
-            </div>
-            <div className="class-actions">
-              <div className="class-code-section">
-                <h3>CLASS CODE</h3>
-                <p className="class-code">ABC123</p>
-              </div>
-              <button
-                className="enter-room-btn"
-                onClick={() => handleEnterRoom()}
-              >
-                ENTER ROOM
-              </button>
-            </div>
-          </div>
 
-          <div className="class-card2">
-            <div className="class-info">
-              <div className="class-details">
-                <p>
-                  <strong>GRADE LEVEL:</strong> 3
-                </p>
-                <p>
-                  <strong>SECTION:</strong> ROSE
-                </p>
-                <p>
-                  <strong>SUBJECT:</strong> FILIPINO
-                </p>
-                <p>
-                  <strong>TEACHER:</strong> John Doe
-                </p>
+      <div className="view-class-container">
+        <h1 className="my-class-title">MY CLASS</h1>
+        <div className="class-list">
+          {classes.map((cls, index) => (
+            <div className={cls.type} key={index}>
+              <div className="class-info">
+                <div className="class-details">
+                  <p>
+                    <strong>GRADE LEVEL:</strong> {cls.grade}
+                  </p>
+                  <p>
+                    <strong>SECTION:</strong> {cls.section}
+                  </p>
+                  <p>
+                    <strong>SUBJECT:</strong> {cls.subject}
+                  </p>
+                  <p>
+                    <strong>TEACHER:</strong> {cls.teacher}
+                  </p>
+                </div>
+              </div>
+              <div className="class-actions">
+                <div className="class-code-section">
+                  <h3>CLASS CODE</h3>
+                  <p className="class-code">{cls.code}</p>
+                </div>
+                <button className="enter-room-btn" onClick={handleEnterRoom}>
+                  ENTER ROOM
+                </button>
               </div>
             </div>
-            <div className="class-actions">
-              <div className="class-code-section">
-                <h3>CLASS CODE</h3>
-                <p className="class-code">DEF456</p>
-              </div>
-              <button
-                className="enter-room-btn"
-                onClick={() => handleEnterRoom()}
-              >
-                ENTER ROOM
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
