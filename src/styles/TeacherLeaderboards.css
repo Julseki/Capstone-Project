@@ -26,7 +26,7 @@
 .profile-section p.role {
   color: #ffc94a;
   font-weight: bold;
-  margin-top: -5px;
+  margin-top: -25px;
   font-size: 20px;
   letter-spacing: 1px;
 }
@@ -115,9 +115,9 @@
 
 h1.leaderboard-title {
   margin: 0;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.5px black;
 }
 
 .trophy-icon {

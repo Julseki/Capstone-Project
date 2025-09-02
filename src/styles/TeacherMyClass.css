@@ -7,28 +7,59 @@
   padding: 0;
 }
 
-.student-home-header {
+.teacher-home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
 }
 
 .header-icons {
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
-.header-box4,
-.header-box5,
-.header-box6 {
+.header-box {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.icon {
-  font-size: 1.5rem;
+.header-box:hover {
+  background-color: #6b814b;
+}
+
+.header-box .icon {
+  font-size: 20px;
+}
+
+.header-box span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header-box.profile .icon,
+.header-box.settings .icon {
+  color: #887443;
+}
+
+.header-box.logout .icon {
+  color: #fff;
 }
 
 .container {

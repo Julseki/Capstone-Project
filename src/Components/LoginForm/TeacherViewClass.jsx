@@ -32,7 +32,7 @@ const TeacherViewClass = () => {
             style={{ cursor: "pointer" }}
           >
             <FaUserCircle className="icon" />
-            <span>Profile</span>
+            <span>PROFILE</span>
           </div>
           <div
             className="header-box2"
@@ -40,7 +40,7 @@ const TeacherViewClass = () => {
             style={{ cursor: "pointer" }}
           >
             <FaCog className="icon" />
-            <span>Settings</span>
+            <span>SETTINGS</span>
           </div>
           <div
             className="header-box3"
@@ -48,7 +48,7 @@ const TeacherViewClass = () => {
             style={{ cursor: "pointer" }}
           >
             <FaSignOutAlt className="icon" />
-            <span>Logout</span>
+            <span>LOGOUT</span>
           </div>
         </div>
       </header>

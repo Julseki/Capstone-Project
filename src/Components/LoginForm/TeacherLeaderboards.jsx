@@ -42,7 +42,7 @@ export default function TeacherLeaderboards() {
         </div>
 
         <div className="menu">
-          <div className="menu-item" onClick={() => navigate("/students")}>
+          <div className="menu-item" onClick={() => navigate("/view-students")}>
             <FaUsers /> VIEW STUDENTS
           </div>
           <div
@@ -63,7 +63,7 @@ export default function TeacherLeaderboards() {
       <div className="main-content">
         <div className="leaderboard-header">
           <FaTrophy className="trophy-icon" />
-          <h1 className="leaderboard-title">LEADERBOARD</h1>
+          <h1 className="leaderboard-title">LEADERBOARDS</h1>
         </div>
 
         <div className="leaderboard-table">

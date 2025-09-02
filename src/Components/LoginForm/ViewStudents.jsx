@@ -37,7 +37,7 @@ const ViewStudents = () => {
     },
     {
       id: 4,
-      name: "Bengin Nanales",
+      name: "Nanales, Bengin",
       username: "Pato40",
       gender: "Male",
       email: "bengin.nanales@normi.edu.ph",
