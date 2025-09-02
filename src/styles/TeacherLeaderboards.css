@@ -111,6 +111,8 @@
   border-radius: 6px;
   color: white;
   margin-bottom: 20px;
+  border: #000 solid 1px;
+  cursor: pointer;
 }
 
 h1.leaderboard-title {
