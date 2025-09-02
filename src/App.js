@@ -23,6 +23,7 @@ import TeacherMyClass from "./Components/LoginForm/TeacherMyClass";
 import TeacherViewClass from "./Components/LoginForm/TeacherViewClass";
 import ViewStudents from "./Components/LoginForm/ViewStudents";
 import TeacherLeaderboards from "./Components/LoginForm/TeacherLeaderboards";
+import MyQuizzes from "./Components/LoginForm/MyQuizzes";
 
 function App() {
   return (
@@ -51,7 +52,11 @@ function App() {
           <Route path="/my-class-teacher" element={<TeacherMyClass />} />
           <Route path="/view-class-teacher" element={<TeacherViewClass />} />
           <Route path="/view-students" element={<ViewStudents />} />
-          <Route path="/teacher-leaderboards" element={<TeacherLeaderboards />} />
+          <Route
+            path="/teacher-leaderboards"
+            element={<TeacherLeaderboards />}
+          />
+          <Route path="/my-quizzes" element={<MyQuizzes />} />
         </Routes>
       </div>
     </BrowserRouter>
