@@ -1,0 +1,161 @@
+.gameplay-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+/* Mini-map */
+.mini-map {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 160px;
+  height: 130px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.mini-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mini-map-label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  font-size: 10px;
+  color: #baff9a;
+}
+
+/* Timer */
+.timer {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #000;
+}
+
+/* Buttons (Settings + Leave Game) */
+.gameplay-buttons {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gameplay-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameplay-btn img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+
+.gameplay-btn span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Character */
+.character-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.character-sprite {
+  width: 90px;
+  height: 90px;
+  image-rendering: pixelated;
+}
+
+.character-info {
+  margin-top: 5px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.character-name {
+  font-size: 12px;
+  color: #ff5555;
+}
+
+.character-hp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hp-bar {
+  width: 80px;
+  height: 8px;
+  background: #333;
+  border: 1px solid #000;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.hp-fill {
+  width: 100%;
+  height: 100%;
+  background: #ff3b3b;
+}
+
+.hp-text {
+  font-size: 10px;
+  color: #fff;
+}
+
+.character-level {
+  background: #67e667;
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+/* Score Display */
+.score-display {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4a7a2b;
+  color: white;
+  padding: 10px 20px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
